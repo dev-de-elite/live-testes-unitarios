@@ -7,9 +7,8 @@ Este é o projeto usado na live de **Testes Unitários em .Net 6**.
 ```powershel
 docker-compose -f docker-sqlserver.yml up -d
 ```
+- Rodar as migrações no banco de dados
 - Rodar o projeto no Visual Studio 2022 ou via CLI
-```powershel
-dotnet run
-```
+
 ## Licença
 [MIT](https://choosealicense.com/licenses/mit/)
