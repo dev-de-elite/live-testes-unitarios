@@ -9,7 +9,7 @@ services:
    - docker_sqlserver_userdbs:/var/opt/sqlserver
    - docker_sqlserver_mssqltools:/var/opt/mssql-tools/bin
   environment:
-   - SA_PASSWORD=!A123456
+   - SA_PASSWORD=!Aa123456
    - ACCEPT_EULA=Y
    - MinProtocol=TLSv1
    - CipherString=DEFAULT@SECLEVEL=1
