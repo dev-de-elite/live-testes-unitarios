@@ -7,7 +7,7 @@ using UsuariosCRUD.DomainService.Repositories;
 
 namespace UsuariosCRUD.DatabaseService.Repositories;
 
-internal class UsuarioTokenRepository : IUsuarioTokenRepository
+public class UsuarioTokenRepository : IUsuarioTokenRepository
 {
     private readonly ApplicationDataContext _context;
     private readonly IMapper _mapper;

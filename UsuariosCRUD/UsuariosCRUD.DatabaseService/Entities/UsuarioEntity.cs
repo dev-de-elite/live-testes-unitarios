@@ -1,6 +1,6 @@
 ﻿namespace UsuariosCRUD.DatabaseService.Entities;
 
-internal class UsuarioEntity
+public class UsuarioEntity
 {
     public long Id { get; set; }
     public string PrimeiroNome { get; set; } = default!;

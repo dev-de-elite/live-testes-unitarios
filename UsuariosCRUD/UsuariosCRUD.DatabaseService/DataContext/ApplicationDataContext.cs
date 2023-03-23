@@ -3,7 +3,7 @@ using UsuariosCRUD.DatabaseService.Entities;
 
 namespace UsuariosCRUD.DatabaseService.DataContext;
 
-internal class ApplicationDataContext : DbContext
+public class ApplicationDataContext : DbContext
 {
     public ApplicationDataContext(DbContextOptions options) : base(options) { }
 

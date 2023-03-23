@@ -7,7 +7,7 @@ using UsuariosCRUD.DomainService.Repositories;
 
 namespace UsuariosCRUD.DomainService.Services;
 
-internal sealed class UsuarioAutenticacaoService : IUsuarioAutenticacaoService
+public sealed class UsuarioAutenticacaoService : IUsuarioAutenticacaoService
 {
     private readonly IUsuarioRepository _usuarioRepository;
     private readonly IUsuarioTokenRepository _usuarioTokenRepository;
@@ -40,9 +40,7 @@ internal sealed class UsuarioAutenticacaoService : IUsuarioAutenticacaoService
     {
         if (await _usuarioTokenRepository.ExisteTokenAtivoPorUsuarioAsync(codigoUsuario))
         {
-            var token = await _usuarioTokenRepository.ObterValidoPorUsuarioAsync(codigoUsuario);
-            if (token is not null)
-                return token;
+            return await _usuarioTokenRepository.ObterValidoPorUsuarioAsync(codigoUsuario);
         }
         return null;
     }
@@ -65,7 +63,7 @@ internal sealed class UsuarioAutenticacaoService : IUsuarioAutenticacaoService
     public async Task<TokenUsuario> ObterTokenValidoAsync(long codigoUsuario)
     {
         var token = await RecuperarTokenValidoAsync(codigoUsuario);
-        if (token is not null) 
+        if (token is not null)
             return token!;
         throw new DomainServiceException($"Não existe um token válidos para o usuário {codigoUsuario}");
     }

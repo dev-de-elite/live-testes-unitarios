@@ -1,6 +1,6 @@
 ﻿namespace UsuariosCRUD.DatabaseService.Entities;
 
-internal class UsuarioTokenEntity
+public class UsuarioTokenEntity
 {
     public long Id { get; set; }
     public string Token { get; set; } = default!;

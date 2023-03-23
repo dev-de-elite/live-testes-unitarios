@@ -5,7 +5,7 @@ using UsuariosCRUD.DomainService.Models;
 
 namespace UsuariosCRUD.DatabaseService.Profiles;
 
-internal class DatabaseServiceProfile : Profile
+public class DatabaseServiceProfile : Profile
 {
     public DatabaseServiceProfile()
     {
