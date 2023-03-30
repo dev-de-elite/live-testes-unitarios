@@ -10,12 +10,8 @@ services:
    - docker_sqlserver_mssqltools:/var/opt/mssql-tools/bin
   environment:
    - MSSQL_SA_PASSWORD=A&VeryComplex123Password
-   - SA_PASSWORD=A&VeryComplex123Password
    - ACCEPT_EULA=Y
-   - MinProtocol=TLSv1
-   - CipherString=DEFAULT@SECLEVEL=1
-   - TrustServerCertificate=True
-   - Encrypt=True
+   - MSSQL_PID=Developer
   ports:
    - 1433:1433
   networks:
